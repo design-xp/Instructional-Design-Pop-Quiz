@@ -68,6 +68,11 @@ document.instantquiz.thesolution.value=solution[whichone]
 }
 
 function responses(){
+
+if (whichone > total){
+	return;
+}
+	
 var temp2=document.instantquiz.theresponse
 var temp3=temp2.options[temp2.selectedIndex].text
 if (temp3!=solution[whichone]&&temp2.selectedIndex!=0)
